@@ -1,0 +1,14 @@
+{
+  "version": "0.7.0a1",
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "command": {
+    "publish": {
+      "registry": "https://registry.npmjs.org/"
+    },
+    "version": {
+      "allowBranch": ["main", "master"],
+      "conventionalCommits": true
+    }
+  }
+}

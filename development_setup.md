@@ -20,7 +20,13 @@ git clone https://github.com/jupyterlite/jupyterlite
 cd jupyterlite
 ```
 
-### 2) Install dependencies
+### 2) Install the jupyterlab
+
+```bash
+python -m pip install -U jupyterlab
+```
+
+### 3) Install dependencies
 - JavaScript deps
 ```bash
 jlpm install

@@ -1,0 +1,127 @@
+/* JupyterLite Component Styles */
+
+.jupyterlite-container {
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+  color: #000;
+  transition: background-color 0.3s ease;
+}
+
+.jupyterlite-container.jp-mod-dark {
+  background-color: #111;
+  color: #fff;
+}
+
+.jupyterlite-error {
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  background-color: #fafafa;
+}
+
+/* Loading Indicator Styles */
+#jupyterlite-loading-indicator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1000;
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+}
+
+#jupyterlite-loading-indicator.hidden {
+  animation: fadeOut 0.5s ease-out forwards;
+  pointer-events: none;
+}
+
+.jupyterlite-loading-indicator-spinner {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 20px;
+  border: 6px solid rgba(0, 0, 0, 0.1);
+  border-top: 6px solid #FFDC00; /* Jupyter yellow */
+  border-radius: 50%;
+  animation: jupyter-spin 1s linear infinite;
+}
+
+.jp-mod-dark .jupyterlite-loading-indicator-spinner {
+  border: 6px solid rgba(255, 255, 255, 0.1);
+  border-top: 6px solid #FFDC00;
+}
+
+.jupyterlite-loading-indicator-text {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: #000000;
+}
+
+.jp-mod-dark .jupyterlite-loading-indicator-text {
+  color: #ffffff;
+}
+
+@keyframes jupyter-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .jupyterlite-container {
+    min-height: 400px;
+  }
+  
+  .jupyterlite-loading-indicator-spinner {
+    width: 40px;
+    height: 40px;
+    border-width: 4px;
+  }
+  
+  .jupyterlite-loading-indicator-text {
+    font-size: 14px;
+  }
+}
+
+/* JupyterLab Theme Integration */
+.jupyterlite-container .jp-ThemedContainer {
+  height: 100%;
+  width: 100%;
+}
+
+/* Ensure proper containment */
+.jupyterlite-container * {
+  box-sizing: border-box;
+}
+
+/* Error State Styles */
+.jupyterlite-error h3 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.jupyterlite-error p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Dark mode error styles */
+.jupyterlite-container.jp-mod-dark .jupyterlite-error {
+  background-color: #1a1a1a;
+  border-color: #333;
+  color: #fff;
+}
+
+.jupyterlite-container.jp-mod-dark .jupyterlite-error h3 {
+  color: #f44336;
+}
+
+.jupyterlite-container.jp-mod-dark .jupyterlite-error p {
+  color: #ccc;
+}

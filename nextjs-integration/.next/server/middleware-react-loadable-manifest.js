@@ -1,0 +1,1 @@
+self.__REACT_LOADABLE_MANIFEST="{\"pages/lab.tsx -> ../components/JupyterLiteComponent\":{\"id\":\"pages/lab.tsx -> ../components/JupyterLiteComponent\",\"files\":[\"static/chunks/components_JupyterLiteComponent_tsx.js\"]}}"
