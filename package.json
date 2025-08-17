@@ -27,8 +27,8 @@
   "scripts": {
     "bootstrap": "jlpm && jlpm clean && jlpm build && jlpm lint",
     "build": "jlpm build:lib && jlpm build:app",
-    "build:app": "lerna run build --stream --parallel --scope @jupyterlite/app",
-    "build:lib": "lerna run build --scope @jupyterlite/metapackage",
+    "build:app": "cd app && npm run build:prod && cd ..",
+    "build:lib": "cd packages/_metapackage && npm run build && cd ../..",
     "build:prod": "lerna run build:prod",
     "build:test": "lerna run build:test",
     "clean": "lerna run clean",
